@@ -20,12 +20,46 @@ Or install it yourself as:
 
 ## Usage
 
-Add the Mollie provider to your OmniAuth initializer which contains all your providers. Replace the `ENV` credentials with your own. Important is the `{ provider_ignores_state: true }`, which is necessary in order to make it work.
+### 1. Add the Rack Middleware and configure Mollie Credentials
+
+Add the Mollie provider to your OmniAuth initializer or create one in `config/initializers/omniauth.rb`. 
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :mollie, ENV['MOLLIE_CLIENT_ID'], ENV['MOLLIE_SECRET'], { provider_ignores_state: true }
+  provider :mollie, ENV['MOLLIE_CLIENT_ID'], ENV['MOLLIE_CLIENT_SECRET'], { provider_ignores_state: true }
 end
+```
+
+Important is the `{ provider_ignores_state: true }`, which is necessary in order to make it work. Replace `ENV['MOLLIE_CLIENT_ID']` and `ENV['MOLLIE_SECRET']` credentials with yours. To aquire these credentials, you'll have to create a [Mollie Application](https://www.mollie.com/dashboard/settings/applications).
+
+
+Use the following redirect URL: `https://[YOUR DOMAIN]/auth/mollie/callback`
+
+### 2. Connect with Mollie
+
+After you set up the Rack Middeware and configured Mollie Credentials, you're ready to let users connect with Mollie. To do, let users to go `/auth/mollie`, which will redirect you to Mollie and connect.
+
+When you are connected, you'll receive an Auth Hash back from calling `request.env['omniauth.auth']`. This is an example Auth Hash:
+
+```
+{
+  "provider"=>"mollie",
+  "uid"=>"<MOLLIE_ORGANIZATION_ID>",
+  "credentials"=> {
+    "token"=>"<MOLLIE_ACCESS_TOKEN>",
+    "refresh_token"=>"<MOLLIE_REFRESH_TOKEN>",
+    "expires"=>1489583888
+  },
+  "extra"=> {
+    "name"=>"<MOLLIE_ORGANIZATION_NAME>",
+    "email"=>"<MOLLIE_ORGANIZATION_EMAIL>",
+    "address"=>"<MOLLIE_ORGANIZATION_ADDRESS>",
+    "postalCode"=>"<MOLLIE_ORGANIZATION_POSTAL_CODE>",
+    "city"=>"<MOLLIE_ORGANIZATION_CITY>",
+    "country"=>"<MOLLIE_ORGANIZATION_COUNTRY>",
+    "countryCode"=>"<MOLLIE_ORGANIZATION_COUNTRY_CODE>",
+  }
+}
 ```
 
 ## Known limitations

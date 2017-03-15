@@ -41,7 +41,7 @@ After you set up the Rack Middeware and configured Mollie Credentials, you're re
 
 When you are connected, you'll receive an Auth Hash back from calling `request.env['omniauth.auth']`. This is an example Auth Hash:
 
-```
+```ruby
 {
   "provider" => "mollie",
   "uid" => "<MOLLIE_ORGANIZATION_ID>",

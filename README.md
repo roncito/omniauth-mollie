@@ -1,6 +1,6 @@
-# OmniAuth Mollie
+# OmniAuth::Mollie
 
-This is a OmniAuth 1.0 strategy for Mollie Connect.
+This is a OmniAuth 1.0 strategy for [Mollie Connect](https://www.mollie.com/en/docs/oauth/overview).
 
 ## Installation
 

@@ -43,22 +43,22 @@ When you are connected, you'll receive an Auth Hash back from calling `request.e
 
 ```
 {
-  "provider"=>"mollie",
-  "uid"=>"<MOLLIE_ORGANIZATION_ID>",
-  "credentials"=> {
-    "token"=>"<MOLLIE_ACCESS_TOKEN>",
-    "refresh_token"=>"<MOLLIE_REFRESH_TOKEN>",
-    "expires"=>1489583888
+  "provider" => "mollie",
+  "uid" => "<MOLLIE_ORGANIZATION_ID>",
+  "credentials" => {
+    "token" => "<MOLLIE_ACCESS_TOKEN>",
+    "refresh_token" => "<MOLLIE_REFRESH_TOKEN>",
+    "expires" => 1489583888,
   },
   "extra"=> {
-    "name"=>"<MOLLIE_ORGANIZATION_NAME>",
-    "email"=>"<MOLLIE_ORGANIZATION_EMAIL>",
-    "address"=>"<MOLLIE_ORGANIZATION_ADDRESS>",
-    "postalCode"=>"<MOLLIE_ORGANIZATION_POSTAL_CODE>",
-    "city"=>"<MOLLIE_ORGANIZATION_CITY>",
-    "country"=>"<MOLLIE_ORGANIZATION_COUNTRY>",
-    "countryCode"=>"<MOLLIE_ORGANIZATION_COUNTRY_CODE>",
-  }
+    "name" =>"<MOLLIE_ORGANIZATION_NAME>",
+    "email" => "<MOLLIE_ORGANIZATION_EMAIL>",
+    "address" => "<MOLLIE_ORGANIZATION_ADDRESS>",
+    "postalCode" => "<MOLLIE_ORGANIZATION_POSTAL_CODE>",
+    "city" => "<MOLLIE_ORGANIZATION_CITY>",
+    "country" => "<MOLLIE_ORGANIZATION_COUNTRY>",
+    "countryCode" => "<MOLLIE_ORGANIZATION_COUNTRY_CODE>",
+  },
 }
 ```
 

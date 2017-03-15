@@ -1,5 +1,8 @@
 # OmniAuth::Mollie
 
+[![Gem Version](https://img.shields.io/gem/v/omniauth-mollie.svg)](https://rubygems.org/gems/omniauth-mollie)
+[![Gem Version](https://img.shields.io/gem/dt/omniauth-mollie.svg)](https://github.com/jenskanis/omniauth-mollie)
+
 This is a OmniAuth 1.0 strategy for [Mollie Connect](https://www.mollie.com/en/docs/oauth/overview).
 
 ## Installation

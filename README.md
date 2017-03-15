@@ -28,6 +28,13 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
+## Known limitations
+
+Connecting with Mollie through this strategy only allows you to have the following [Mollie Permissions](https://www.mollie.com/nl/docs/oauth/permissions):
+`payments.read, customers.read, subscriptions.read, organizations.read`
+
+Please create a pull request when you want the gem to have more permissions.
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/omniauth-mollie.

@@ -64,10 +64,9 @@ When you are connected, you'll receive an Auth Hash back from calling `request.e
 
 ## Known limitations
 
-Connecting with Mollie through this strategy only allows you to have the following [Mollie Permissions](https://www.mollie.com/nl/docs/oauth/permissions):
-`payments.read, customers.read, subscriptions.read, organizations.read`
+1. This only allows you to have the following [Mollie Permissions](https://www.mollie.com/nl/docs/oauth/permissions): `payments.read, customers.read, subscriptions.read, organizations.read`. Please create a pull request if you'd like the gem to have more permissions.
 
-Please create a pull request when you want the gem to have more permissions.
+2. Mollie's access tokens expire in **1 hour**, and their refresh tokens expire in **2 weeks**. I contacted Mollie to extend this period or completely remove expirations from access tokens, but have yet to do this. Please [contact Mollie](https://help.mollie.com/hc/en/requests/new) to convince them to do the latter.
 
 ## Contributing
 

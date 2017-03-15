@@ -37,7 +37,7 @@ Please create a pull request when you want the gem to have more permissions.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/omniauth-mollie.
+Bug reports and pull requests are welcome on GitHub at https://github.com/jenskanis/omniauth-mollie.
 
 
 ## License

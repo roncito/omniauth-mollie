@@ -1,7 +1,9 @@
 # OmniAuth::Mollie
 
+[![License](https://img.shields.io/badge/License-MIT_License-blue.svg)](https://github.com/jenskanis/omniauth-mollie/blob/master/LICENSE)
 [![Gem Version](https://img.shields.io/gem/v/omniauth-mollie.svg)](https://rubygems.org/gems/omniauth-mollie)
-[![Gem Version](https://img.shields.io/gem/dt/omniauth-mollie.svg)](https://rubygems.org/gems/omniauth-mollie)
+[![Gem Downloads](https://img.shields.io/gem/dt/omniauth-mollie.svg)](https://rubygems.org/gems/omniauth-mollie)
+
 
 This is a OmniAuth 1.0 strategy for [Mollie Connect](https://www.mollie.com/en/docs/oauth/overview).
 
